@@ -29,44 +29,24 @@ const isUpdatable = () => {
 
 export default function () {
   const helpMenu = {
-    label: '&Help',
+    label: '&帮助',
     role: 'help',
     submenu: [{
-      label: 'Quick Start...',
+      label: '快速启动...',
       click () {
         shell.openExternal('https://github.com/marktext/marktext/blob/master/docs/README.md')
       }
     }, {
-      label: 'Markdown Reference...',
+      label: 'Markdown手册...',
       click () {
         shell.openExternal('https://github.com/marktext/marktext/blob/master/docs/MARKDOWN_SYNTAX.md')
       }
     }, {
-      label: 'Changelog...',
-      click () {
-        shell.openExternal('https://github.com/marktext/marktext/blob/master/.github/CHANGELOG.md')
-      }
+      type: 'separator'
     }, {
       type: 'separator'
     }, {
-      label: 'Donate via Open Collective...',
-      click (item, win) {
-        shell.openExternal('https://opencollective.com/marktext')
-      }
-    }, {
-      label: 'Feedback via Twitter...',
-      click (item, win) {
-        actions.showTweetDialog(win, 'twitter')
-      }
-    }, {
-      label: 'Report Issue or Request Feature...',
-      click () {
-        shell.openExternal('https://github.com/marktext/marktext/issues')
-      }
-    }, {
-      type: 'separator'
-    }, {
-      label: 'Website...',
+      label: '网站...',
       click () {
         shell.openExternal('https://github.com/marktext/marktext')
       }
@@ -81,14 +61,9 @@ export default function () {
         shell.openExternal('https://github.com/Jocs')
       }
     }, {
-      label: 'Follow us on Twitter...',
-      click () {
-        shell.openExternal('https://twitter.com/marktextapp')
-      }
-    }, {
       type: 'separator'
     }, {
-      label: 'License...',
+      label: '协议...',
       click () {
         shell.openExternal('https://github.com/marktext/marktext/blob/master/LICENSE')
       }

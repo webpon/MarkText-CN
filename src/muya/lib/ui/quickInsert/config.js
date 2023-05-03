@@ -34,135 +34,135 @@ const SHIFT_KEY = isOsx ? '⇧' : 'Shift'
 // Fn
 
 export const quickInsertObj = {
-  'basic block': [{
-    title: 'Paragraph',
-    subTitle: 'Lorem Ipsum is simply dummy text',
+  基础模块: [{
+    title: '段落',
+    subTitle: '普通的文字',
     label: 'paragraph',
     shortCut: `${COMMAND_KEY}+0`,
     icon: paragraphIcon
   }, {
-    title: 'Horizontal Line',
+    title: '水平分割线',
     subTitle: '---',
     label: 'hr',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+-`,
     icon: hrIcon
   }, {
-    title: 'Front Matter',
-    subTitle: '--- Lorem Ipsum ---',
+    title: '前言部分',
+    subTitle: '--- 前言部分 ---',
     label: 'front-matter',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Y`,
     icon: frontMatterIcon
   }],
-  header: [{
-    title: 'Header 1',
-    subTitle: '# Lorem Ipsum is simply ...',
+  标题: [{
+    title: '标题一',
+    subTitle: '# 标题一.',
     label: 'heading 1',
     shortCut: `${COMMAND_KEY}+1`,
     icon: header1Icon
   }, {
-    title: 'Header 2',
-    subTitle: '## Lorem Ipsum is simply ...',
+    title: '标题二',
+    subTitle: '## 标题二',
     label: 'heading 2',
     shortCut: `${COMMAND_KEY}+2`,
     icon: header2Icon
   }, {
-    title: 'Header 3',
-    subTitle: '### Lorem Ipsum is simply ...',
+    title: '标题三',
+    subTitle: '### 标题三 ...',
     label: 'heading 3',
     shortCut: `${COMMAND_KEY}+3`,
     icon: header3Icon
   }, {
-    title: 'Header 4',
-    subTitle: '#### Lorem Ipsum is simply ...',
+    title: '标题四',
+    subTitle: '#### 标题四 ...',
     label: 'heading 4',
     shortCut: `${COMMAND_KEY}+4`,
     icon: header4Icon
   }, {
-    title: 'Header 5',
-    subTitle: '##### Lorem Ipsum is simply ...',
+    title: '标题五',
+    subTitle: '##### 标题五 ...',
     label: 'heading 5',
     shortCut: `${COMMAND_KEY}+5`,
     icon: header5Icon
   }, {
-    title: 'Header 6',
-    subTitle: '###### Lorem Ipsum is simply ...',
+    title: '标题六',
+    subTitle: '###### 标题六 ...',
     label: 'heading 6',
     shortCut: `${COMMAND_KEY}+6`,
     icon: header6Icon
   }],
-  'advanced block': [{
-    title: 'Table Block',
-    subTitle: '|Lorem | Ipsum is simply |',
+  高级块: [{
+    title: '表格',
+    subTitle: '|文本 | 文本 |',
     label: 'table',
     shortCut: `${SHIFT_KEY}+${COMMAND_KEY}+T`,
     icon: newTableIcon
   }, {
-    title: 'Display Math',
-    subTitle: '$$ Lorem Ipsum is simply $$',
+    title: '数学公式',
+    subTitle: '$$ 1+1=2 $$',
     label: 'mathblock',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+M`,
     icon: mathblockIcon
   }, {
-    title: 'HTML Block',
+    title: 'HTML 代码',
     subTitle: '<div> Lorem Ipsum is simply </div>',
     label: 'html',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+J`,
     icon: htmlIcon
   }, {
-    title: 'Code Block',
+    title: '代码块',
     subTitle: '```java Lorem Ipsum is simply ```',
     label: 'pre',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+C`,
     icon: codeIcon
   }, {
-    title: 'Quote Block',
+    title: '引用',
     subTitle: '>Lorem Ipsum is simply ...',
     label: 'blockquote',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+Q`,
     icon: quoteIcon
   }],
-  'list block': [{
-    title: 'Order List',
+  列表: [{
+    title: '有序列表',
     subTitle: '1. Lorem Ipsum is simply ...',
     label: 'ol-order',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+O`,
     icon: orderListIcon
   }, {
-    title: 'Bullet List',
+    title: '无序列表',
     subTitle: '- Lorem Ipsum is simply ...',
     label: 'ul-bullet',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+U`,
     icon: bulletListIcon
   }, {
-    title: 'To-do List',
+    title: '任务清单',
     subTitle: '- [x] Lorem Ipsum is simply ...',
     label: 'ul-task',
     shortCut: `${OPTION_KEY}+${COMMAND_KEY}+X`,
     icon: todoListIcon
   }],
-  diagram: [{
-    title: 'Vega Chart',
-    subTitle: 'Render flow chart by vega-lite.js.',
+  图表: [{
+    title: 'Vega图表',
+    subTitle: '使用vega-lite.js渲染流程图。',
     label: 'vega-lite',
     icon: vegaIcon
   }, {
-    title: 'Flow Chart',
-    subTitle: 'Render flow chart by flowchart.js.',
+    title: '流程图',
+    subTitle: '使用flowchart.js渲染流程图。',
     label: 'flowchart',
     icon: flowchartIcon
   }, {
-    title: 'Sequence Diagram',
-    subTitle: 'Render sequence diagram by js-sequence.',
+    title: '时序图',
+    subTitle: '使用js-sequence渲染时序图。',
     label: 'sequence',
     icon: sequenceIcon
   }, {
-    title: 'PlantUML Diagram',
-    subTitle: 'Render PlantUML diagrams',
+    title: 'PlantUML图表',
+    subTitle: '渲染PlantUML图表。',
     label: 'plantuml',
     icon: plantumlIcon
   }, {
     title: 'Mermaid',
-    subTitle: 'Render Diagram by mermaid.',
+    subTitle: '使用Mermaid渲染图表。',
     label: 'mermaid',
     icon: mermaidIcon
   }]

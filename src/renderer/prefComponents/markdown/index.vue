@@ -3,31 +3,31 @@
     <h4>Markdown</h4>
     <compound>
       <template #head>
-        <h6 class="title">Lists:</h6>
+        <h6 class="title">列表:</h6>
       </template>
       <template #children>
         <bool
-          description="Prefer loose list items"
+          description="偏向于使用松散列表项"
           :bool="preferLooseListItem"
           :onChange="value => onSelectChange('preferLooseListItem', value)"
           more="https://spec.commonmark.org/0.29/#loose"
         ></bool>
         <cur-select
-          description="Preferred marker for bullet lists"
+          description="无序列表的首选标记符号"
           :value="bulletListMarker"
           :options="bulletListMarkerOptions"
           :onChange="value => onSelectChange('bulletListMarker', value)"
           more="https://spec.commonmark.org/0.29/#bullet-list-marker"
         ></cur-select>
         <cur-select
-          description="Preferred marker for ordered lists"
+          description="有序列表的首选标记符号"
           :value="orderListDelimiter"
           :options="orderListDelimiterOptions"
           :onChange="value => onSelectChange('orderListDelimiter', value)"
           more="https://spec.commonmark.org/0.29/#ordered-list"
         ></cur-select>
         <cur-select
-          description="Preferred list indentation"
+          description="列表缩进的首选方式"
           :value="listIndentation"
           :options="listIndentationOptions"
           :onChange="value => onSelectChange('listIndentation', value)"
@@ -37,23 +37,23 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Markdown extensions:</h6>
+        <h6 class="title">Markdown 扩展:</h6>
       </template>
       <template #children>
         <cur-select
-          description="Front matter format"
+          description="头信息格式"
           :value="frontmatterType"
           :options="frontmatterTypeOptions"
           :onChange="value => onSelectChange('frontmatterType', value)"
         ></cur-select>
         <bool
-          description="Enable Pandoc-style superscript and subscript"
+          description="启用 Pandoc 风格的上标和下标"
           :bool="superSubScript"
           :onChange="value => onSelectChange('superSubScript', value)"
           more="https://pandoc.org/MANUAL.html#superscripts-and-subscripts"
         ></bool>
         <bool
-          description="Enable Pandoc-style footnotes"
+          description="启用 Pandoc 风格的脚注"
           notes="Requires restart."
           :bool="footnote"
           :onChange="value => onSelectChange('footnote', value)"
@@ -64,16 +64,16 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Compatibility:</h6>
+        <h6 class="title">兼容性:</h6>
       </template>
       <template #children>
         <bool
-          description="Enable HTML rendering"
+          description="启用 HTML 渲染"
           :bool="isHtmlEnabled"
           :onChange="value => onSelectChange('isHtmlEnabled', value)"
         ></bool>
         <bool
-          description="Enable GitLab compatibility mode"
+          description="启用 GitLab 兼容模式"
           :bool="isGitlabCompatibilityEnabled"
           :onChange="value => onSelectChange('isGitlabCompatibilityEnabled', value)"
         ></bool>
@@ -82,11 +82,11 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Diagrams:</h6>
+        <h6 class="title">图表:</h6>
       </template>
       <template #children>
         <cur-select
-          description="Sequence diagram theme"
+          description="时序图主题"
           :value="sequenceTheme"
           :options="sequenceThemeOptions"
           :onChange="value => onSelectChange('sequenceTheme', value)"
@@ -95,20 +95,6 @@
       </template>
     </compound>
 
-    <compound>
-      <template #head>
-        <h6 class="title">Misc:</h6>
-      </template>
-      <template #children>
-        <cur-select
-          description="Preferred heading style"
-          :value="preferHeadingStyle"
-          :options="preferHeadingStyleOptions"
-          :onChange="value => onSelectChange('preferHeadingStyle', value)"
-          :disable="true"
-        ></cur-select>
-      </template>
-    </compound>
   </div>
 </template>
 

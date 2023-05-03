@@ -1,18 +1,18 @@
 <template>
   <div class="pref-general">
-    <h4>General</h4>
+    <h4>通用</h4>
     <compound>
       <template #head>
-        <h6 class="title">Auto Save:</h6>
+        <h6 class="title">自动保存:</h6>
       </template>
       <template #children>
         <bool
-          description="Automatically save document changes"
+          description="自动保存文档更改"
           :bool="autoSave"
           :onChange="value => onSelectChange('autoSave', value)"
         ></bool>
         <range
-          description="Delay following document edit before automatically saving"
+          description="自动保存之前延迟文档编辑后的时间"
           :value="autoSaveDelay"
           :min="1000"
           :max="10000"
@@ -25,7 +25,7 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Window:</h6>
+        <h6 class="title">窗口:</h6>
       </template>
       <template #children>
         <cur-select
@@ -37,22 +37,22 @@
           :onChange="value => onSelectChange('titleBarStyle', value)"
         ></cur-select>
         <bool
-          description="Hide scrollbars"
+          description="隐藏滚动条"
           :bool="hideScrollbar"
           :onChange="value => onSelectChange('hideScrollbar', value)"
         ></bool>
         <bool
-          description="Open files in new window"
+          description="在新窗口打开文件"
           :bool="openFilesInNewWindow"
           :onChange="value => onSelectChange('openFilesInNewWindow', value)"
         ></bool>
         <bool
-          description="Open folders in new window"
+          description="在新窗口打开文件夹"
           :bool="openFolderInNewWindow"
           :onChange="value => onSelectChange('openFolderInNewWindow', value)"
         ></bool>
         <cur-select
-          description="Zoom"
+          description="缩放"
           :value="zoom"
           :options="zoomOptions"
           :onChange="value => onSelectChange('zoom', value)"
@@ -62,29 +62,20 @@
 
     <compound>
       <template #head>
-        <h6 class="title">Sidebar:</h6>
+        <h6 class="title">侧边栏:</h6>
       </template>
       <template #children>
         <bool
-          description="Wrap text in table of contents"
+          description="在目录中换行文本"
           :bool="wordWrapInToc"
           :onChange="value => onSelectChange('wordWrapInToc', value)"
         ></bool>
-
-        <!-- TODO: The description is very bad and the entry isn't used by the editor. -->
-        <cur-select
-          description="Sort field for files in open folders"
-          :value="fileSortBy"
-          :options="fileSortByOptions"
-          :onChange="value => onSelectChange('fileSortBy', value)"
-          :disable="true"
-        ></cur-select>
       </template>
     </compound>
 
     <compound>
       <template #head>
-        <h6 class="title">Action on startup:</h6>
+        <h6 class="title">启动时的操作:</h6>
       </template>
       <template #children>
         <section class="startup-action-ctrl">
@@ -93,28 +84,14 @@
               Hide "lastState" for now (#2064).
             <el-radio class="ag-underdevelop" label="lastState">Restore last editor session</el-radio>
             -->
-            <el-radio label="folder" style="margin-bottom: 10px;">Open the default directory<span>: {{defaultDirectoryToOpen}}</span></el-radio>
-            <el-button size="small" @click="selectDefaultDirectoryToOpen">Select Folder</el-button>
-            <el-radio label="blank">Open a blank page</el-radio>
+            <el-radio label="folder" style="margin-bottom: 10px;">打开默认目录<span>: {{defaultDirectoryToOpen}}</span></el-radio>
+            <el-button size="small" @click="selectDefaultDirectoryToOpen">选择目录</el-button>
+            <el-radio label="blank">打开一个空白页</el-radio>
           </el-radio-group>
         </section>
       </template>
     </compound>
 
-    <compound>
-      <template #head>
-        <h6 class="title">Misc:</h6>
-      </template>
-      <template #children>
-        <cur-select
-          description="User interface language"
-          :value="language"
-          :options="languageOptions"
-          :onChange="value => onSelectChange('language', value)"
-          :disable="true"
-        ></cur-select>
-      </template>
-    </compound>
   </div>
 </template>
 

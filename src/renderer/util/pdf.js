@@ -125,7 +125,7 @@ export const getHtmlToc = (toc, options = {}) => {
     return ''
   }
 
-  const title = options.tocTitle ? options.tocTitle : 'Table of Contents'
+  const title = options.tocTitle ? options.tocTitle : '目录'
   const html = `<div class="toc-container"><p class="toc-title">${title}</p><ul class="toc-list">${tocList}</ul></div>`
   return sanitize(html, EXPORT_DOMPURIFY_CONFIG)
 }

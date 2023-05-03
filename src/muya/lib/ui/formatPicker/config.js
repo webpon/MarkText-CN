@@ -60,7 +60,7 @@ const icons = [
     icon: imageIcon
   }, {
     type: 'clear',
-    tooltip: 'Clear Formatting',
+    tooltip: '清除格式',
     shortcut: `⇧+${COMMAND_KEY}+R`,
     icon: clearIcon
   }

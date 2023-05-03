@@ -194,7 +194,7 @@
           </div>
         </el-tab-pane>
 
-        <el-tab-pane label="Table of Contents" name="toc">
+        <el-tab-pane label="目录" name="toc">
           <bool
             description="Include top heading:"
             detailedDescription="Includes the first heading level too."

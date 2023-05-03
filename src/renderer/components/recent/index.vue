@@ -7,7 +7,7 @@
           <use :xlink:href="ContentIcon.url" />
         </svg>
         <button class="button-primary" @click="newFile">
-          New File
+          新建文件
         </button>
       </div>
     </div>

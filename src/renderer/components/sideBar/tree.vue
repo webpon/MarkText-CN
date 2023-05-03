@@ -10,7 +10,7 @@
         <svg class="icon icon-arrow" :class="{'fold': !showOpenedFiles}" aria-hidden="true" @click.stop="toggleOpenedFiles()">
           <use xlink:href="#icon-arrow"></use>
         </svg>
-        <span class="default-cursor text-overflow" @click.stop="toggleOpenedFiles()">Opened files</span>
+        <span class="default-cursor text-overflow" @click.stop="toggleOpenedFiles()">文件列表</span>
         <a href="javascript:;" @click.stop="saveAll(false)" title="Save All">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-save-all"></use>
@@ -63,7 +63,7 @@
         ></file>
         <div class="empty-project" v-if="projectTree.files.length === 0 && projectTree.folders.length === 0">
           <span>Empty project</span>
-          <a href="javascript:;" @click.stop="createFile">Create File</a>
+          <a href="javascript:;" @click.stop="createFile">新建文件</a>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
           <use :xlink:href="FolderIcon.url"></use>
         </svg>
         <button class="button-primary" @click="openFolder">
-          Open Folder
+          打开目录
         </button>
       </div>
     </div>

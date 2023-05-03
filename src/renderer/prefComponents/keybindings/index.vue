@@ -1,20 +1,20 @@
 <template>
   <div class="pref-keybindings">
-    <h4>Key Bindings</h4>
+    <h4>快捷键</h4>
     <section class="keybindings">
       <div class="text">
-        Customize MarkText shortcuts and click on the save button below to apply all changes (requires a restart).
-        All available and default key binding can be found <a class="link" @click="openKeybindingWiki">online</a>.
+        定制MarkText快捷键并点击下面的保存按钮以应用所有更改（需要重新启动）。
+        可以在<a class="link" @click="openKeybindingWiki">在线</a>找到所有可用和默认的键绑定。
       </div>
       <el-table
         :data="keybindingList"
         style="width: 100%"
       >
-        <el-table-column prop="description" label="Description">
+        <el-table-column prop="description" label="功能">
         </el-table-column>
-        <el-table-column prop="accelerator" label="Key Combination" width="220">
+        <el-table-column prop="accelerator" label="快捷键" width="220">
         </el-table-column>
-        <el-table-column fixed="right" label="Options" width="90">
+        <el-table-column fixed="right" label="操作" width="90">
           <template slot-scope="scope">
             <el-button @click="handleEditClick(scope.$index, scope.row)" type="text" size="small" title="Edit">
               <i class="el-icon-edit"></i>
@@ -31,13 +31,8 @@
     </section>
     <section class="footer">
       <separator></separator>
-      <el-button size="medium" @click="saveKeybindings">Save</el-button>
-      <el-button size="medium" @click="restoreDefaults">Restore default key bindings</el-button>
-    </section>
-    <section v-if="showDebugTools" class="keyboard-debug">
-      <separator></separator>
-      <div><strong>Debug options:</strong></div>
-      <el-button size="medium" @click="dumpKeyboardInformation">Dump keyboard information</el-button>
+      <el-button size="medium" @click="saveKeybindings">保存</el-button>
+      <el-button size="medium" @click="restoreDefaults">恢复为默认快捷键</el-button>
     </section>
     <key-input-dialog
       :showWithId="selectedShortcutId"

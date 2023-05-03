@@ -5,7 +5,7 @@
       <div class="search-wrapper">
         <input
           type="text" v-model="keyword"
-          placeholder="Search in folder..."
+          placeholder="在目录中查找..."
           @keyup="search"
         >
         <div class="controls">
@@ -43,7 +43,7 @@
       </div>
 
       <div class="search-message-section" v-if="showNoFolderOpenedMessage">
-        <span>No folder open</span>
+        <span>没有目录打开</span>
       </div>
       <div class="search-message-section" v-if="showNoResultFoundMessage">No results found.</div>
       <div class="search-message-section" v-if="searchErrorString">{{ searchErrorString }}</div>
@@ -78,7 +78,7 @@
             v-if="showNoFolderOpenedMessage"
             @click="openFolder"
           >
-            Open Folder
+            打开目录
           </button>
         </div>
       </div>

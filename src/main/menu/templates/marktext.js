@@ -6,19 +6,19 @@ import * as actions from '../actions/marktext'
 
 export default function (keybindings) {
   return {
-    label: 'MarkText',
+    label: 'WowMarkdown',
     submenu: [{
-      label: 'About MarkText',
+      label: '关于WowMarkdown',
       click (menuItem, focusedWindow) {
         showAboutDialog(focusedWindow)
       }
     }, {
-      label: 'Check for updates...',
+      label: '检查更新...',
       click (menuItem, focusedWindow) {
         actions.checkUpdates(focusedWindow)
       }
     }, {
-      label: 'Preferences',
+      label: '偏好设置',
       accelerator: keybindings.getAccelerator('file.preferences'),
       click () {
         actions.userSetting()
@@ -26,32 +26,32 @@ export default function (keybindings) {
     }, {
       type: 'separator'
     }, {
-      label: 'Services',
+      label: '服务',
       role: 'services',
       submenu: []
     }, {
       type: 'separator'
     }, {
-      label: 'Hide MarkText',
+      label: '隐藏程序',
       accelerator: keybindings.getAccelerator('mt.hide'),
       click () {
         actions.osxHide()
       }
     }, {
-      label: 'Hide Others',
+      label: '隐藏其他程序',
       accelerator: keybindings.getAccelerator('mt.hide-others'),
       click () {
         actions.osxHideAll()
       }
     }, {
-      label: 'Show All',
+      label: '显示所有程序',
       click () {
         actions.osxShowAll()
       }
     }, {
       type: 'separator'
     }, {
-      label: 'Quit MarkText',
+      label: '退出程序',
       accelerator: keybindings.getAccelerator('file.quit'),
       click: app.quit
     }]

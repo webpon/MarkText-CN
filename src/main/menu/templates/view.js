@@ -2,9 +2,9 @@ import * as actions from '../actions/view'
 
 export default function (keybindings) {
   const viewMenu = {
-    label: '&View',
+    label: '&显示',
     submenu: [{
-      label: 'Command Palette...',
+      label: '命令面板...',
       accelerator: keybindings.getAccelerator('view.command-palette'),
       click (menuItem, focusedWindow) {
         actions.showCommandPalette(focusedWindow)
@@ -13,7 +13,7 @@ export default function (keybindings) {
       type: 'separator'
     }, {
       id: 'sourceCodeModeMenuItem',
-      label: 'Source Code Mode',
+      label: '源码模式',
       accelerator: keybindings.getAccelerator('view.source-code-mode'),
       type: 'checkbox',
       checked: false,
@@ -22,7 +22,7 @@ export default function (keybindings) {
       }
     }, {
       id: 'typewriterModeMenuItem',
-      label: 'Typewriter Mode',
+      label: '打字机模式',
       accelerator: keybindings.getAccelerator('view.typewriter-mode'),
       type: 'checkbox',
       checked: false,
@@ -31,7 +31,7 @@ export default function (keybindings) {
       }
     }, {
       id: 'focusModeMenuItem',
-      label: 'Focus Mode',
+      label: '专注模式',
       accelerator: keybindings.getAccelerator('view.focus-mode'),
       type: 'checkbox',
       checked: false,
@@ -41,7 +41,7 @@ export default function (keybindings) {
     }, {
       type: 'separator'
     }, {
-      label: 'Show Sidebar',
+      label: '显示侧边栏',
       id: 'sideBarMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-sidebar'),
       type: 'checkbox',
@@ -50,7 +50,7 @@ export default function (keybindings) {
         actions.toggleSidebar(focusedWindow)
       }
     }, {
-      label: 'Show Tab Bar',
+      label: '显示标签',
       id: 'tabBarMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-tabbar'),
       type: 'checkbox',
@@ -59,14 +59,14 @@ export default function (keybindings) {
         actions.toggleTabBar(focusedWindow)
       }
     }, {
-      label: 'Toggle Table of Contents',
+      label: '折叠/展开目录',
       id: 'tocMenuItem',
       accelerator: keybindings.getAccelerator('view.toggle-toc'),
       click (_, focusedWindow) {
         actions.showTableOfContents(focusedWindow)
       }
     }, {
-      label: 'Reload Images',
+      label: '刷新图片',
       accelerator: keybindings.getAccelerator('view.reload-images'),
       click (item, focusedWindow) {
         actions.reloadImageCache(focusedWindow)
@@ -86,7 +86,7 @@ export default function (keybindings) {
       }
     })
     viewMenu.submenu.push({
-      label: 'Reload window',
+      label: '重载窗口',
       accelerator: keybindings.getAccelerator('view.dev-reload'),
       click (item, focusedWindow) {
         actions.debugReloadWindow(focusedWindow)

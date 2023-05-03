@@ -5,7 +5,7 @@ import { isOsx } from '../../config'
 
 export default function (keybindings) {
   const menu = {
-    label: '&Window',
+    label: '&窗口',
     role: 'window',
     submenu: [{
       label: 'Minimize',
